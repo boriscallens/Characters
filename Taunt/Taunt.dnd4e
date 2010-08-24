@@ -23,7 +23,7 @@
          <Company>  </Company>
          <Portrait>  </Portrait>
          <Experience> 3750 </Experience>
-         <CarriedMoney> 25 gp </CarriedMoney>
+         <CarriedMoney> 3 pp; 30 gp </CarriedMoney>
          <StoredMoney>  </StoredMoney>
          <Traits>  </Traits>
          <Appearance>  </Appearance>
@@ -615,9 +615,9 @@
             <statadd value="6" />
          </Stat>
 
-         <Stat value="52" >
+         <Stat value="85" >
             <alias name="Weight" />
-            <statadd value="52" />
+            <statadd value="85" />
          </Stat>
 
          <Stat value="0" >
@@ -633,6 +633,11 @@
          <Stat value="2" >
             <alias name="Armor Enhancement Bonus" />
             <statadd Level="4" value="2" charelem="15030400" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="melee basic:damage" />
+            <statadd String="+1d6" Level="4" conditional="when charging" value="0" />
          </Stat>
 
       </StatBlock>
@@ -847,7 +852,7 @@
             <RulesElement name="Chainmail" type="Armor" internal-id="ID_FMP_ARMOR_4" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=4&amp;ftype=2" charelem="15030540" legality="rules-legal" >
             </RulesElement>
          </loot>
-         <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Adventurer&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_1" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1&amp;ftype=4" charelem="1502dde0" legality="rules-legal" >
             </RulesElement>
          </loot>
@@ -875,8 +880,36 @@
             <RulesElement name="Amulet of Protection +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_1047" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1047&amp;ftype=1" charelem="15030950" legality="rules-legal" >
             </RulesElement>
          </loot>
-         <loot count="2" equip-count="0" ShowPowerCard="1" >
+         <loot count="7" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Potion of Healing (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_1138" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1138&amp;ftype=1" charelem="15030900" legality="rules-legal" >
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Greatsword" type="Weapon" internal-id="ID_FMP_WEAPON_27" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=27&amp;ftype=3" charelem="15032d90" legality="rules-legal" >
+            </RulesElement>
+            <RulesElement name="Thane Blood Weapon +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_7120" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7120&amp;ftype=1" charelem="15032d40" legality="rules-legal" >
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Chainmail" type="Armor" internal-id="ID_FMP_ARMOR_4" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=4&amp;ftype=2" charelem="15032fc0" legality="rules-legal" >
+            </RulesElement>
+            <RulesElement name="Joyous Armor +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_8586" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=8586&amp;ftype=1" charelem="15032f20" legality="rules-legal" >
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Spidersilk Mantle +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_7392" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7392&amp;ftype=1" charelem="15032700" legality="rules-legal" >
+            </RulesElement>
+         </loot>
+         <loot count="1" equip-count="1" ShowPowerCard="1" >
+            <RulesElement name="Bloodthirst Bracers (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_3178" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=3178&amp;ftype=1" charelem="150336f0" legality="rules-legal" >
+            </RulesElement>
+         </loot>
+         <loot count="1" equip-count="1" ShowPowerCard="1" >
+            <RulesElement name="Horned Helm (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_1023" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1023&amp;ftype=1" charelem="150338d0" legality="rules-legal" >
+            </RulesElement>
+         </loot>
+         <loot count="1" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Lesser Elixir of Invisibility (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_7228" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7228&amp;ftype=1" charelem="15033c90" legality="rules-legal" >
             </RulesElement>
          </loot>
       </LootTally>
@@ -908,7 +941,8 @@
 +1 enhancement bonus.
 
                </DamageComponents>
-               <Conditions> +1d6 to damage rolls against enemies at maximum hit points.
+               <Conditions> +1d6 to damage rolls when charging.
++1d6 to damage rolls against enemies at maximum hit points.
 +3 to damage rolls on opportunity attacks - Mantle of Elation.               </Conditions>
             </Weapon>
             <Weapon name="Unarmed" >
@@ -923,7 +957,8 @@
                <DamageComponents> +1 Strength modifier.
 
                </DamageComponents>
-               <Conditions> +3 to damage rolls on opportunity attacks - Mantle of Elation.               </Conditions>
+               <Conditions> +1d6 to damage rolls when charging.
++3 to damage rolls on opportunity attacks - Mantle of Elation.               </Conditions>
             </Weapon>
          </Power>
 
@@ -1405,6 +1440,38 @@
          <RulesElement name="Wisdom" type="Ability Increase (Level 4)" internal-id="ID_INTERNAL_ABILITY_INCREASE_(LEVEL_4)_WISDOM" charelem="15029600" legality="rules-legal" />
          <RulesElement name="" type="" charelem="1502ffa0" legality="rules-legal" />
       </RulesElement>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Greatsword" type="Weapon" internal-id="ID_FMP_WEAPON_27" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=27&amp;ftype=3" charelem="15032cf0" legality="rules-legal" />
+         <RulesElement name="Thane Blood Weapon +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_7120" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7120&amp;ftype=1" charelem="15032c00" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Chainmail" type="Armor" internal-id="ID_FMP_ARMOR_4" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=4&amp;ftype=2" charelem="15032ed0" legality="rules-legal" />
+         <RulesElement name="Joyous Armor +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_8586" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=8586&amp;ftype=1" charelem="15032e80" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Spidersilk Mantle +1" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_7392" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7392&amp;ftype=1" charelem="150330b0" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Chainmail" type="Armor" internal-id="ID_FMP_ARMOR_4" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=4&amp;ftype=2" charelem="15033290" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Adventurer&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_1" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1&amp;ftype=4" charelem="15033380" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Greatsword" type="Weapon" internal-id="ID_FMP_WEAPON_27" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=27&amp;ftype=3" charelem="150334c0" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="1" ShowPowerCard="1" >
+         <RulesElement name="Bloodthirst Bracers (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_3178" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=3178&amp;ftype=1" charelem="150335b0" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="1" ShowPowerCard="1" >
+         <RulesElement name="Horned Helm (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_1023" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1023&amp;ftype=1" charelem="15033790" legality="rules-legal" />
+      </loot>
+      <loot count="5" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Potion of Healing (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_1138" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1138&amp;ftype=1" charelem="15033970" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Lesser Elixir of Invisibility (heroic tier)" type="Magic Item" internal-id="ID_FMP_MAGIC_ITEM_7228" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7228&amp;ftype=1" charelem="15033d80" legality="rules-legal" />
+      </loot>
    </Level>
 
 
@@ -1446,7 +1513,7 @@
       
    </textstring>
    <textstring name="LAYOUT_DATA" >
-      MobilePanelsLocked=True|CurrentOrientationStyle=Vertical|NewPageLayoutAffinity=Portrait|NewPowerLayoutAffinity=Landscape|ShowJournalPages=False|ShowNotesPage=False|ShowPowerCardPages=True|ShowBasicAttackPowerCards=False|ShowOptionalCards=True|ShowNormalItemCards=False|ShowItemSetInfoCards=True|ShowAllWeaponsForCards=False|ShowBlankPowerCardPage=False|ShowPageNumbers=True|ShowFlavorText=False|ReplacesAdditionalEffects=True|ZoomLevel=100|PersonalizedData=True&amp;BaseStyle=PortraitPage1/LayoutStyle=Portrait|*/HEADER|*/INITIATIVE/ABILITY_SCORES/HIT_POINTS/SKILLS|*/DEFENSES/ACTION_POINTS/RACE_FEATURES;Height=151/CLASS_FEATURES;Height=270/LANGUAGES;Height=52|*/MOVEMENT/SENSES/ATTACK_WORKSPACE;Melee Basic Attack - Unarmed:Ranged Basic Attack - Unarmed/DAMAGE_WORKSPACE;Melee Basic Attack - Unarmed:Ranged Basic Attack - Unarmed/BASIC_ATTACKS/FEATS;Height=338&amp;BaseStyle=PortraitPage2/LayoutStyle=Portrait|*|*/POWERS_PANEL/OTHER_EQUIPMENT;Height=221/COINS_AND_WEALTH|*/MAGIC_ITEMS_PANEL/RITUALS;Height=221|*/PORTRAIT/NOTES_PERSONALITY;Height=110/NOTES_APPEARANCE;Height=110/NOTES_BACKGROUND;Height=110/NOTES_ALLIES;Height=110/NOTES_SESSION;Height=110
+      MobilePanelsLocked=False|CurrentOrientationStyle=Vertical|NewPageLayoutAffinity=Landscape|NewPowerLayoutAffinity=Landscape|ShowJournalPages=False|ShowNotesPage=False|ShowPowerCardPages=True|ShowBasicAttackPowerCards=False|ShowOptionalCards=True|ShowNormalItemCards=False|ShowItemSetInfoCards=True|ShowAllWeaponsForCards=False|ShowBlankPowerCardPage=False|ShowPageNumbers=True|ShowFlavorText=False|ReplacesAdditionalEffects=True|ZoomLevel=100|PersonalizedData=True&amp;BaseStyle=LandscapePage1/LayoutStyle=Landscape|*/HEADER_LANDSCAPE|*/INITIATIVE/ABILITY_SCORES/SKILLS/LANGUAGES_LANDSCAPE;Height=35|*/DEFENSES/RACE_FEATURES_LANDSCAPE;Height=134/CLASS_FEATURES_LANDSCAPE;Height=253|*/MOVEMENT/SENSES/ACTION_POINTS/FEATS_LANDSCAPE;Height=440|*/HIT_POINTS/ATTACK_WORKSPACE/DAMAGE_WORKSPACE/BASIC_ATTACKS&amp;BaseStyle=LandscapePage2/LayoutStyle=Landscape|*|*/POWERS_PANEL/COINS_AND_WEALTH|*/MAGIC_ITEMS_PANEL|*/NOTES_PERSONALITY;Height=110/NOTES_APPEARANCE;Height=110/NOTES_BACKGROUND;Height=110/NOTES_ALLIES;Height=110/OTHER_EQUIPMENT_LANDSCAPE;Height=187|*/PORTRAIT/NOTES_SESSION_LANDSCAPE;Height=233/RITUALS_LANDSCAPE;Height=187
    </textstring>
    <textstring name="LAYOUT_DATAPowerCard" >
       &lt;PowerCards&gt;
@@ -1521,6 +1588,11 @@
     &lt;RuleID&gt;ID_FMP_POWER_11536&lt;/RuleID&gt;
     &lt;WeaponSelections /&gt;
   &lt;/PowerCardUtility&gt;
+  &lt;PowerCardNormalItem Visibility=&quot;Hidden&quot; IsInSpellbook=&quot;False&quot;&gt;
+    &lt;CharLootID xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+      &lt;baseID&gt;ID_FMP_GEAR_1&lt;/baseID&gt;
+    &lt;/CharLootID&gt;
+  &lt;/PowerCardNormalItem&gt;
   &lt;PowerCardMagicWeapon Visibility=&quot;Visible&quot; IsInSpellbook=&quot;False&quot;&gt;
     &lt;CharLootID xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
       &lt;enchantID&gt;ID_FMP_MAGIC_ITEM_5974&lt;/enchantID&gt;
@@ -1541,6 +1613,21 @@
   &lt;PowerCardMagicItem Visibility=&quot;Visible&quot; IsInSpellbook=&quot;False&quot;&gt;
     &lt;CharLootID xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
       &lt;baseID&gt;ID_FMP_MAGIC_ITEM_1138&lt;/baseID&gt;
+    &lt;/CharLootID&gt;
+  &lt;/PowerCardMagicItem&gt;
+  &lt;PowerCardMagicItem Visibility=&quot;Visible&quot; IsInSpellbook=&quot;False&quot;&gt;
+    &lt;CharLootID xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+      &lt;baseID&gt;ID_FMP_MAGIC_ITEM_3178&lt;/baseID&gt;
+    &lt;/CharLootID&gt;
+  &lt;/PowerCardMagicItem&gt;
+  &lt;PowerCardMagicItem Visibility=&quot;Visible&quot; IsInSpellbook=&quot;False&quot;&gt;
+    &lt;CharLootID xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+      &lt;baseID&gt;ID_FMP_MAGIC_ITEM_1023&lt;/baseID&gt;
+    &lt;/CharLootID&gt;
+  &lt;/PowerCardMagicItem&gt;
+  &lt;PowerCardMagicItem Visibility=&quot;Visible&quot; IsInSpellbook=&quot;False&quot;&gt;
+    &lt;CharLootID xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+      &lt;baseID&gt;ID_FMP_MAGIC_ITEM_7228&lt;/baseID&gt;
     &lt;/CharLootID&gt;
   &lt;/PowerCardMagicItem&gt;
 &lt;/PowerCards&gt;
@@ -1657,7 +1744,7 @@
       false
    </textstring>
    <textstring name="Character Save File" >
-      D:\Characters\Taunt\Taunt - geared up.dnd4e
+      D:\Characters\Taunt\Taunt.dnd4e
    </textstring>
    <textstring name="_INTERNAL_MainHandWeapon" >
       Challenge-Seeking Claw Fighter Claw +1
@@ -1672,13 +1759,22 @@
       false
    </textstring>
    <textstring name="_PER_LEVEL_4_Carried Money" >
-      25 gp
+      3 pp; 30 gp
    </textstring>
    <textstring name="_PER_LEVEL_4_Stored Money" >
       
    </textstring>
    <textstring name="_PER_LEVEL_4_Residuum" >
       0
+   </textstring>
+   <textstring name="USAGE_Bloodthirst Bracers (heroic tier)" >
+      false
+   </textstring>
+   <textstring name="USAGE_Horned Helm (heroic tier)" >
+      false
+   </textstring>
+   <textstring name="USAGE_Lesser Elixir of Invisibility (heroic tier)" >
+      false
    </textstring>
 
 
