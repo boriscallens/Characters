@@ -1,0 +1,79 @@
+﻿<D20CampaignSetting name="Dark Sun - Jens" >
+   <!--
+      Dungeons and Dragons Insider: Character Builder campaign save file
+   -->
+   <Houserules>
+      <RulesElement name="Elemental Spirit" type="Class Feature" internal-id="ID_INTERNAL_CLASS_FEATURE_ELEMENTAL_SPIRIT" >
+      When you choose your spirit companion, you can
+choose Elemental Spirit instead ofanother option, such
+as the ones in Players Handbook 2 and Primal Power.
+ELEMENTAL. SPIRIT
+You draw on elemental spirits inhabiting the earth
+to give you strength and fuel the raw power ofyour
+evocations.
+Spirit Boon: Your alliesgain a +2 bonus to saving
+throws while adjacent to your spirit companion. In
+addition, ifyour spirit companion is not present at the
+start ofyour turn, you can summon it once during
+that turn as a free action.
+Spirits Wrath: You gain the spirits wrath power,
+an attack youmake through your spirit companion as
+an opportunity action.
+At-Will Attack Power: You gain the spirit infusion
+power. You can choose a second at-will attack power
+as normal.
+
+Spirit&apos;s Wrath Shaman Feature
+Burning hatred drives1your spirit to smash into your enemy.
+At-Will 4 Implement, Primal, Spirit
+Opportunity Action Melee spirit 1
+Trigger: An enemy leaves a square adjacent to your spirit
+companion without shifting.
+Target: The triggering enemy
+Attack: Wisdom vs. Reflex
+Hit: 1 d6 + Wisdom modifier damage,and the target
+grants combat advantage until the end of your next turn.
+Level 21: 2d6 +Wisdom modifier damage.
+      </RulesElement>
+      <RulesElement name="Spirit Of Vigor" type="Feat" internal-id="ID_INTERNAL_FEAT_SPIRIT_OF_VIGOR" >
+      SPiRIT OF VIGOR
+Prerequisite: Shaman, Elemental Spirit class
+feature
+Benefit: When you use call spirit companion as a
+minor action, one ally adjacent to your spirit compan
+ion when it appearsgains temporary hit points equal
+to yourIntelligence modifier.
+      </RulesElement>
+      <RulesElement name="Spirit Infusion" type="Power" internal-id="ID_INTERNAL_POWER_SPIRIT_INFUSION" >
+      LEVEL 1 AT-WILL EVOCATION
+Spirit Infusion Shaman Attack 1
+Youdismiss your spirit companion, whichflows into an ally and
+enables him or her to make a swift and sudden attack.
+At-Will 4 Primal, Spirit
+Standard Action Melee spirit 1
+Target One ally
+Effect Your spirit companion disappears, and thetarget
+can make a basic attack with a +2 power bonus to the
+attack roll and a power bonus to the damage roll equal to
+yourIntelligencemodifier.
+      </RulesElement>
+      <RulesElement name="Granite Armor" type="Power" internal-id="ID_INTERNAL_POWER_GRANITE_ARMOR" >
+      Shaman Attack 3
+Your spirit companion enters your allys body, encasing your
+comrade in a stony sheath and sendin8 rocky shardsflying
+outward.
+Encounter 4 Implement, Primal, Spirit
+Standard Action Melee spirit 1
+Primary Target: One ally
+Effect:Your spirit companion disappears, and the primary
+target gainsresist 3 to all damage until the end of your
+next turn. Make an attack that is a close burst 1 centered
+on the primary target.
+Elemental Spirit The resistance equals 2 + yourIntelligence
+modifier.
+Secondary Target Each enemy in burst
+Attack: Wisdom + 2 vs. AC
+Hit 2d6 + Wisdom modifier damage.
+      </RulesElement>
+   </Houserules>
+</D20CampaignSetting>
